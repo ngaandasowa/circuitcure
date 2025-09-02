@@ -1,0 +1,35 @@
+.card {
+    position: absolute;
+    transition: transform 1s ease-out, opacity 0.5s ease;
+    opacity: 0;
+    transform: translate(0, 0);
+  }
+  
+  .card.animate {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  
+  .card.scattered {
+    transform: translate(var(--x), var(--y));
+    opacity: 0;
+  }
+  
+  .card-container {
+    position: relative;
+    height: 100%;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .animate-fadeIn {
+    animation: fadeIn 1s ease-out;
+  }
+  
